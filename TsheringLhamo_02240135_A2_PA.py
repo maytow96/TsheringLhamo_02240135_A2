@@ -49,6 +49,7 @@ class GameSystem:
                 self.lives -= 1
                 print(f"guess lower . Lives remaining: {self.lives}. Try again.")
 
+
         if self.lives == 0:
             print("You have run out of lives. Game over!")
 
@@ -92,7 +93,10 @@ class GameSystem:
         print(f"Current score: {self.score}. Lives remaining: {self.lives}.")
 
     def trivia_quiz_game(self):
-        """Play a trivia quiz game."""
+        """promts the user to Play a trivia quiz game.
+        -each win gains 10 points.
+        -each loss cost a life.
+        -The game will be over if the player runs out of lives."""
         if self.lives <= 0:
             print("You have no lives left. Game over!")
             return
